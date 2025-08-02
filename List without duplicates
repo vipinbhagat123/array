@@ -1,0 +1,13 @@
+#  Remove Duplicates from Sorted Array
+def k(s):
+    if not s:
+        return 0
+    m=[s[0]]    # alway add first element
+    i=0
+    for j in range(1, len(s)):
+        if s[i]!=s[j]:
+            m.append(s[j])
+            i=j
+    return m
+s=[1, 1, 2, 2, 3]
+print(k(s))
