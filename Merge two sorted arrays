@@ -1,0 +1,14 @@
+# Merge two sorted arrays
+
+def merge_easy(arr1, arr2):
+    combined = arr1 + arr2
+    combined.sort()
+    arr1[:] = combined[:len(arr1)]
+    arr2[:] = combined[len(arr1):]
+
+# Example
+arr1 = [1, 3, 5]
+arr2 = [2, 4, 6]
+merge_easy(arr1, arr2)
+print("arr1:", arr1)
+print("arr2:", arr2)
