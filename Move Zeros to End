@@ -1,0 +1,14 @@
+# Move Zeros to End
+
+def k(s):
+    left=0
+    for right in range(len(s)):
+        if s[right]!=0:
+            s[left],s[right]=s[right],s[left]
+            left+=1
+    return s
+
+
+
+s=[0, 1, 0, 3, 12]
+print(k(s))
