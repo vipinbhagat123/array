@@ -1,0 +1,19 @@
+# two sum (two pointers)
+
+def k(s, target):
+    left=0
+    right=len(s)-1
+    while left<right:
+        c=s[left]+s[right]
+        if c==target:
+            return [left,right]
+        elif c<target:
+            left+=1
+        else:
+            right-=1
+    return -1
+
+
+s=[1,2,4,6,10]
+target=8
+print(k(s,target))
